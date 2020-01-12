@@ -1,0 +1,1076 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}button,html,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:after,q:before{content:'';content:none}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ol,nav ul{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline}button,input{line-height:normal}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+	height: 100vh;
+	width: 100vw;
+}
+
+/*Page transition effect*/
+
+body {
+  animation: fadeIn 1.1s linear;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*Background circles*/
+
+.circle1 {
+    height: 65vw;
+    width: 65vw;
+    position: fixed;
+    z-index: -1;
+	top: -32.5vw;
+	left: -32.5vw;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.circle2 {
+    height: 65vw;
+    width: 65vw;
+    position: fixed;
+    z-index: -1;
+    bottom: -32.5vw;
+	right: -32.5vw;
+    background-color: #E10600;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/*Logo on the index page*/
+
+.logo {
+	display: block;
+	margin: auto;
+	margin-top: 9%;
+	width: 310px;
+	height: 200px;
+}
+
+/*Book button index page*/
+
+.button {
+	display: inline-block;
+	background-color: #E10600;
+	border: 6px solid black;	
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family:'Staatliches';
+	font-size: 60px;
+	margin-top: 10px;
+	font-weight: 400;
+	color: black;
+	padding: 3px 30px 0px 40px;
+	letter-spacing: 0.05em;
+}
+
+/*Social media on index page*/
+
+.socialmediaindex {
+	text-align: center;
+	padding-top: 5px;
+}
+
+.socialmediaindex a{
+	text-decoration: none;
+}
+
+/*Logo on other pages*/
+
+.logo2 {
+	display: block;
+	margin: auto;
+	margin-top: -9vh;
+	width: 190px;
+	height: 80px;
+}
+
+/*Logo on the booking pages w/out 'Book' button*/
+
+.logo-book {
+	display: block;
+	margin: auto;
+	margin-top: -6%;
+	width: 190px;
+	height: 80px;
+}
+
+/*Book on other pages*/
+
+.book {
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	background-color: #E10600;
+	border: 6px solid black;	
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family:'Staatliches';
+	font-size: 40px;
+	margin-top: 10px;
+	font-weight: 400;
+	color: black;
+	padding: 3px 20px 0px 30px;
+	letter-spacing: 0.05em;
+}
+
+nav {
+	text-align: center;
+}
+
+/*Hamburger menu*/
+
+.menu {
+	display: none;
+	z-index: 1;
+    background-color: rgba(255,255,255,0.4);
+    border: 1px solid black;
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.menu ul {
+	margin-top: 120px;
+}
+
+.menu ul li a {
+	display: inline-block;
+	top: 20vw;
+	color: white;
+	background-color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family:'Roboto';
+	font-size: 45px;
+	padding: 10px 16px;
+	font-weight: bold;
+	border: 0.75px #000000;
+	margin-bottom: 5px;
+}
+
+.menu div div a {
+	position: absolute;
+	top: 1vw;
+	right: 2vw;
+	color: black;
+	background-color: #E10600;
+	padding: 5px 12px;
+	border: 5px solid black;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family:'Roboto';
+	font-size: 40px;
+	font-weight: bold;
+	margin: 2px;
+}
+
+.menucontainer {
+	background-color: black;
+	position: relative;
+	z-index: -1;
+	margin: auto;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu.open {
+	display: block;
+}
+
+.hamburger {
+	display: inline-block;
+	position: relative;
+	padding: 5px 10px;
+	width: 90px;
+	height: 90px;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+/*Side pages layout*/
+
+.wrapper {
+		width: 95%;
+		max-width: 45%;
+		margin: 0 auto;
+		margin-top: 2%;
+		background-color: rgba(0,0,0,0.5);
+		padding: 30px;
+		text-align: center;
+		color: #FFFFFF;
+}
+
+iframe {
+	max-width: 100%;
+}
+
+
+/*About*/
+
+.poster {
+	width: 475px;
+}
+
+
+.heading1 {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	color: #E10600;
+	left: 0%;
+	font-size: 35px;
+}
+
+.heading2 {
+	text-align: center;
+	font-weight: bold;
+	color: #E10600;
+	left: 15%;
+	font-size: 30px;
+}
+
+.copyp {
+	font-family: Roboto;
+	font-size: 16px;
+	text-align: left;
+}
+
+
+.troublesimg {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: space-between;
+}
+
+/*Contact page general*/
+
+/*Boxes with venues*/
+
+#venues {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 800px;
+	margin: 0 auto;
+	margin-top: 20vh;
+}
+
+#venues div {
+	font-family: Roboto;
+	font-size: 30px;
+	text-align: center;
+	width: 30%;
+	border: 3px solid black;
+	background: black;
+}
+
+#venues div a:hover {
+color: rgba(255,255,255,0.2);
+}
+
+#venues div a {
+	text-decoration: none;
+	color: white;
+	font-family: Roboto;
+	font-weight: bold;
+	text-align: center;
+	display: inline-block;
+	padding: 5vw 5vh;
+}  
+
+/*Contact details of organiser*/
+
+.contactinfo {
+	position: fixed;
+	display: inline-block;
+	left: 2%;
+	bottom: 7%;
+	line-height: 10px;
+	padding: 3px 30px 0px 40px;
+	color: black;
+}
+
+.contactinfo h1 {
+	font-family: Staatliches;
+	text-decoration: underline;
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: left;
+	line-height: 20px;
+}
+
+.contactinfo h2 {
+	font-family: Roboto;
+	font-size: 23px;
+	text-align: left;
+	color: #E10600;
+	text-decoration: bold;
+}
+
+/*Wrapper for venue contact pages with Google maps*/
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.wrapper-contact {
+    display: block;
+    width: 36%;
+    min-width: 340px;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 7%;
+    background-color: rgba(0,0,0,0.3);
+    padding: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/*Google map embedded*/
+
+.mapouter{
+	position:relative;
+	text-align:right;
+	height:300px;width:300px;
+	max-width: 100%;
+}
+
+.gmap_canvas {
+	overflow:hidden;
+	background:none !important;
+	max-width: 100%;
+}
+
+.column1 {
+	width: 50%;
+}
+
+.column2 {
+	width: 50%;
+	padding-left: 7%;
+	margin-top: 10px;
+	text-align: left;
+	font-family: Roboto;
+	font-size: 18px;
+}
+
+
+.column2 .logo-venue {
+	text-align: center;
+}
+
+.column2 header {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+.column2 address {
+	font-style: normal
+}
+
+/*Gallery page*/
+
+.gallery-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 50%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+	margin-top: 5%;
+	background-color: rgba(0,0,0,0.3);
+	justify-content: center;
+}
+
+  .gallery {
+  	width: 280px;
+  	height: 200px;
+  	margin: 3px;
+  }
+
+/*Cast and crew*/
+
+.wrapper-cast {
+	width: 100%;
+	max-width: 45%;
+	margin: 0 auto;
+	margin-top: 2%;
+	background-color: rgba(0,0,0,0.5);
+	padding: 30px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.cast-grid {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	max-width: 90%;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.cast-grid div {
+	display: inline-block;
+	font-family: Roboto;
+	font-size: 1.5vw;
+	text-align: center;
+	width: 40%;
+	margin: 3px;
+}
+
+.cast {
+	width: 170px;
+  	height: 200px;
+	margin: 10px;
+	border-radius: 50%;
+}
+
+
+.crew-grid {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	max-width: 50%;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.roles {
+	font-family: Roboto;
+	font-size: 1.5vw;
+	text-decoration: underline;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.crew-names {
+	font-family:Roboto;
+	font-size: 1.25vw;
+	text-decoration: none;
+	color: black;
+}
+
+.crew {
+  	margin: 15px;
+  	margin-top: 1vh;
+}
+
+.crew-wrap {
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.partners-grid {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	max-width: 50%;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.partners-grid div {
+	display: inline-block;
+	font-family: Roboto;
+	font-size: 1.25vw;
+	text-align: center;
+	width: 40%;
+	margin: 10px;
+}
+
+.partners-grid div a{
+	text-decoration: none;
+	color: white;
+}
+
+ .sponsors {
+  	width: 100px;
+  	height: 105px;
+  	margin: 3px;
+ }
+
+
+/*Booking pages*/
+
+.wrapper-booking {
+	width: 95%;
+	max-width: 45%;
+	margin: 0 auto;
+	margin-top: 2%;
+	background-color: rgba(0,0,0,0.5);
+	padding: 30px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.booking-title {
+	font-family: Roboto;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.5vw;
+	color: #FFFFFF;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.logo-booking {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.booking-table {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 800px;
+	margin: 0 auto;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.booking-table div div{
+	border: 5px solid black;
+	padding-right: 20px;
+	padding-left: 20px;
+	background: black;
+	text-decoration: none;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	font-family: Roboto;
+	font-weight: bold;
+	margin-bottom: 30px;
+}  
+
+.booking-table div a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 26px;
+}
+
+.booking-illustration {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+
+/*Contact venues particular pages*/
+  
+
+.socialmediacontact {
+    text-align: center;
+}
+
+.arrow {
+	position: absolute;
+	top: 27vh;
+	left: 33vw;
+}
+
+.arrow-contact {
+	position: absolute;
+	top: 25vh;
+	left: 25vw;
+}
+
+/*Newsletter on index page*/
+
+.newsletter-wrapper {
+	position: fixed;
+	right: 5vw;
+	bottom: 10vw;
+}
+
+.newsletter-wrapper a {
+	text-decoration: none
+}
+
+/*Envelope on the index page*/
+
+.envelope {
+	display: inline-block;
+	position: absolute;
+  	top: 110%;
+  	left: 50%;
+  
+  	transform: translate(-50%, -50%);
+	
+	height: 36px;
+	width: 75px;
+	position: 0 auto;
+}
+
+/*Open newsletter pop-up*/
+
+.newsletter-modal {
+	display: none;
+	background-color: black;
+	margin: 0 auto;
+	padding: 20px;
+	top: 50%;
+	left: 50%;
+	width: 25vw;
+	min-width: 320px;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.newsletter-modal.open {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+form {
+  border: 4px solid black;
+}
+
+.container {
+  padding: 2px;
+  background-color: black;
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+input[type=submit] {
+  background-color: #E10600;
+  font-family: Staatliches;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: black;
+  border: none;
+}
+
+input[type=submit]:hover {
+  color: white;
+  opacity: 0.8;
+} 
+
+/*Newsletter and social media section on other pages*/
+
+.newsletter-wrapper2 {
+	position: fixed;
+	right: 2%;
+	bottom: 10%;
+}
+
+.newsletter-wrapper2 a {
+	text-decoration: none
+}
+
+.newsletter-wrapper2 span{
+	position: absolute;
+  	top: 140%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.newsletter {
+	background-color: black;
+	color: white;
+	padding: 2px 15px;
+	font-family: Staatliches;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+}
+
+/*Image gallery slider*/
+
+ .slider-holder {
+ 	width: 700px;
+ 	height: 400px;
+ 	background-color: yellow;
+ 	margin-left: auto;
+	 margin-right: auto;
+	 margin-top: 7vh;
+	 text-align: center;
+	 overflow: hidden;
+	 box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+} 
+       
+.image-holder {
+ 	width: 2400px;
+	 background-color: black;
+	 height: 400px;
+	 clear: both;
+	 position: relative;
+           
+	 -webkit-transition: left 2s;
+	 -moz-transition: left 2s;
+ 	-o-transition: left 2s;
+ 	transition: left 2s;
+}
+       
+.slider-image {
+ 	float: left;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
+       
+#slider-image-1:target ~ .image-holder {
+ 	left: 0px;
+}
+       
+#slider-image-2:target ~ .image-holder {
+ 	left: -800px;
+}
+       
+#slider-image-3:target ~ .image-holder {
+ 	left: -1600px;
+}
+       
+.button-holder {
+ 	position: relative;
+ 	top: -20px;
+}
+       
+.slider-change {
+ 	display: inline-block;
+ 	height: 10px;
+ 	width: 10px;
+ 	border-radius: 5px;
+ 	background-color: rgba(0,0,0,0.7);
+}
+
+/*Image gallery Fotorama JS slider*/
+
+.fotorama {
+	position: absolute;
+ 	display: flex;
+ 	align-items: center;
+ 	margin-top: 10vh;
+ 	left: 50vh;
+ 	height: 50%;
+ 	width: 50%;
+	background-size: contain;
+	background-position: center;
+}
+
+.gallery-fotorama {
+ 	justify-content: center;
+}
+
+/*----------------------------Responsive settings for mobile - 400px width--------------------------------*/
+
+@media only screen and (max-width: 400px) {
+
+	.menu ul {
+		margin-top: 50px;
+	}
+
+	.menucontainer a {
+		display: none;
+	}
+
+	.menu {
+		display: none;
+		z-index: 1;
+	    background-color: rgba(255,255,255,0.2);
+	    border: 1px solid black;
+	    width: 95%;
+	    height: 80%;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translateX(-50%) translateY(-50%);
+	}
+
+	.menu.open {
+		display: block;
+		position: absolute;
+    	top: 46%;
+    	left: 50%;
+    	width: 90%;
+    	height: 65%;
+	}
+
+	.index-wrapper {
+		margin-top: 20vh;
+	}
+
+	.hamburger {
+	    top: -1vh;
+	    left: -2vw;
+	}
+
+/*Index page*/
+
+	.newsletter-wrapper {
+		position: absolute;
+		left: 5%;
+		top: 100%;
+		text-align: center;
+		margin: 1vh;
+	}
+
+	.envelope {
+  		top: 250%;
+	}
+
+/*Wrapper for About page*/
+	.wrapper {
+		max-width: 95%;
+		margin-top: 10%;
+		padding-bottom: 40%;
+	}
+
+/*Newsletter and social media section for About page*/
+
+	.newsletter-wrapper2  {
+	    right: initial;
+	    width: 100%;
+	    left: 50%;
+	    text-align: center;
+	    transform: translateX(-50%);
+	}
+
+/*Smaller logo for About page*/
+
+	.logo2 {
+		position: absolute;
+		display: block;
+		margin: auto;
+		top: 3.5vh;
+		left: 29vw;
+		width: 120px;
+		height: 50px;
+	}
+
+/*Book button for About page*/
+
+	.book {
+		position: fixed;
+	    padding: 9px 20px 4px 20px;
+	    font-size: 35px;
+	    line-height: 1;
+	    top: 7px;
+	}
+
+/*Text size for mobile - About*/
+
+	.copy {
+		font-size: 14px;
+	}
+
+/*Text size for mobile - About*/
+	.logo-book {
+		margin-top: 3vh;
+		width: 170px;
+		height: 60px;
+	}
+
+/*Booking general page - mobile settings*/
+
+	.container-contact {
+	margin-top: -18vh;
+	}
+
+	#venues {
+		display: flex;
+		flex-direction: column;
+		margin-left: 25vh;
+	}
+
+	#venues div {
+		display: inline-block;
+		justify-content: center;
+		width: 100%;
+		max-width: 800px;
+		margin-left: -12vh;
+		margin-bottom: 2vw;
+	}
+
+	#venues div a {
+		padding: 12vw 5vh;
+	}
+
+	.contactinfo {
+		position: relative;
+		display: inline-block;
+		left: 7vh;
+		margin-top: 2vh;
+		line-height: 10px;
+		color: black;
+		padding-bottom: 40%;
+	}
+
+	.contactinfo h1 {
+		text-align: center;
+	}
+
+	.contactinfo h2{
+		text-align: center;
+		color: black;
+	}
+/*Contact pages for venues with Google maps - mobile settings*/
+
+	.row {
+		flex-direction: column;
+		justify-content: center;
+		margin-top: 4vh;
+	}
+
+	.wrapper-contact {
+   	 	margin-top: 12vh;
+   	 	padding-bottom: 40%;
+	}
+
+	.column1 {
+		width: 100%;
+	}
+
+	.column2 {
+		width: 100%;
+	}
+
+	.arrow-contact {
+		top: 20vh;
+		left: 8vw;
+	}
+
+/*Wrapper for Booking pages for particular venues*/
+	.wrapper-booking {
+		max-width: 95%;
+		margin-top: 15%;
+		padding-bottom: 40%;
+	}
+
+	.booking-title {
+		font-size: 5vw;
+	}
+
+	.booking-table div div{
+		font-size: 12px;
+		margin: 0 auto;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.booking-table div div a {
+		font-size: 20px;
+	}
+	
+	.arrow {
+		top: 27vh;
+		left: 15vw;
+	}
+
+/*Cast and crew - mobile settings*/
+
+	.wrapper-cast {
+		max-width: 95%;
+		margin-top: 10%;
+		padding-bottom: 30%;
+	}
+
+	.cast-grid {
+		max-width: 100%
+	}
+
+	.cast-grid div {
+		width: 45%;
+		font-size: 5vw;
+	}
+
+	.cast {
+		width: 170px;
+		height: 200px;
+	}
+
+	.crew-grid {
+		flex-direction: column;
+		max-width: 100%;
+		margin-bottom: 2px;
+	}
+
+	.role {
+		font-size: 5vw;
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+
+	.crew-names {
+		font-size: 5vw;
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+
+	.partners-grid div {
+		font-size: 5vw;
+		width: 70%;
+	}
+
+/*Gallery page*/
+
+	.gallery-wrapper {
+		max-width: 95%;
+		margin-top: 7vh;
+		padding-bottom: 40%;
+	}
+
+	.gallery {
+		margin: 0 auto;
+	}
+
+}
+

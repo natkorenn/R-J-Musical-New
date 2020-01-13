@@ -810,6 +810,38 @@ input[type=submit]:hover {
  	justify-content: center;
 }
 
+/*----------------------------Responsive settings for mobile - 1000px plus width--------------------------------*/
+
+@media only screen and (min-width: 1000px) {
+
+	/*Index page*/
+
+	.newsletter-wrapper {
+		position: fixed;
+		right: 2%;
+		bottom: 10%;
+	}
+}
+
+/*----------------------------Responsive settings for mobile - 600px width--------------------------------*/
+
+@media only screen and (max-width: 600px) {
+
+	/*Index page*/
+
+	.newsletter-wrapper {
+		position: absolute;
+		left: 5%;
+		top: 80%;
+		text-align: center;
+		margin: 1vh;
+	}
+
+	.envelope {
+  		top: 80%;
+	}
+}
+
 /*----------------------------Responsive settings for mobile - 400px width--------------------------------*/
 
 @media only screen and (max-width: 400px) {
@@ -845,10 +877,12 @@ input[type=submit]:hover {
 	}
 
 	.index-wrapper {
-		margin-top: 20vh;
+		margin-top: 10vh;
 	}
 
 	.hamburger {
+		width: 85px;
+		height: 85px;
 	    top: -1vh;
 	    left: -2vw;
 	}
@@ -858,13 +892,13 @@ input[type=submit]:hover {
 	.newsletter-wrapper {
 		position: absolute;
 		left: 5%;
-		top: 100%;
+		top: 85%;
 		text-align: center;
 		margin: 1vh;
 	}
 
 	.envelope {
-  		top: 250%;
+  		top: 110%;
 	}
 
 /*Wrapper for About page*/
@@ -1073,4 +1107,3 @@ input[type=submit]:hover {
 	}
 
 }
-
